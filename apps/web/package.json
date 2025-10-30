@@ -1,1 +1,7 @@
-{\n    "name":  "@mybavul/web",\n    "private":  true,\n    "scripts":  {\n                    "dev":  "next dev",\n                    "build":  "next build",\n                    "start":  "next start",\n                    "test":  "echo no-tests"\n                },\n    "dependencies":  {\n                         "next":  "14.2.5",\n                         "react":  "18.3.1",\n                         "react-dom":  "18.3.1"\n                     },\n    "devDependencies":  {\n                            "typescript":  "^5.6.2",\n                            "@types/react":  "^18.3.3",\n                            "@types/node":  "^20.12.12"\n                        }\n}
+{
+  "name": "@mybavul/web",
+  "private": true,
+  "scripts": {"dev": "next dev", "build": "next build", "start": "next start", "test": "echo no-tests"},
+  "dependencies": {"next": "14.2.5", "react": "18.3.1", "react-dom": "18.3.1"},
+  "devDependencies": {"typescript": "^5.6.2", "@types/react": "^18.3.3", "@types/node": "^20.12.12"}
+}
