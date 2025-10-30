@@ -20,4 +20,5 @@ await app.listen({ port: Number(process.env.PORT ?? 3001), host: "0.0.0.0" });
 \napp.get('/api/v1/openapi.json', async () => (await import('./openapi.json', { assert: { type: 'json' } })).default as any);\n
 
 
-\nimport { registerConnections } from './routes/connections';\nawait registerConnections(app);\n
+\nimport { registerConnections } from './routes/connections';\nawait registerConnections(app);\nimport { registerLedger } from './routes/ledger';\nawait registerLedger(app);\n
+
