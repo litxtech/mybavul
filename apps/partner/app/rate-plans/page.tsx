@@ -13,3 +13,4 @@ export default function Page(){
 }
 
 
+\n\nexport function List(){ const [rows,setRows]=useState<any[]>([]); const base=String(process.env.NEXT_PUBLIC_API_BASE||''); useEffect(()=>{ fetch(${base}/api/v1/partner/rate-plans?tenantId=&propertyId=).then(r=>r.json()).then(setRows);},[]); const del=async(id:string)=>{ await fetch(${base}/api/v1/partner/rate-plans/+id,{method:'DELETE'}); setRows(rows.filter(r=>r.id!==id));}; return <div style={{marginTop:12}}>{rows.map((r:any)=>(<div key={r.id}>{r.name} <button onClick={()=>del(r.id)}>Delete</button></div>))}</div>; }

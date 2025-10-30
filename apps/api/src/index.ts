@@ -23,3 +23,4 @@ await app.listen({ port: Number(process.env.PORT ?? 3001), host: "0.0.0.0" });
 \nimport { registerConnections } from './routes/connections';\nawait registerConnections(app);\nimport { registerLedger } from './routes/ledger';\nawait registerLedger(app);\n
 
 
+\nimport { registerSyncLogs } from './routes/sync-logs';\nawait registerSyncLogs(app);\nimport { registerPartnerList } from './routes/partner-list';\nawait registerPartnerList(app);\n
