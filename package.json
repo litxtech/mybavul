@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "mybavul",
   "private": true,
   "packageManager": "pnpm@9.0.0",
@@ -11,4 +11,4 @@
     "test": "turbo run test"
   },
   "workspaces": ["apps/*", "packages/*"]
-}
+}\n

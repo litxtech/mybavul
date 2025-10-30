@@ -1,4 +1,4 @@
-﻿{
+{
   "compilerOptions": {
     "target": "ES2022",
     "module": "ESNext",
@@ -14,4 +14,4 @@
     "types": ["node"],
     "baseUrl": "."
   }
-}
+}\n
