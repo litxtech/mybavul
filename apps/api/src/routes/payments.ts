@@ -6,3 +6,4 @@ export async function registerPayments(app: FastifyInstance) {
     return rep.code(200).send({ clientSecret: 'pi_test_secret_stub' });
   });
 }
+

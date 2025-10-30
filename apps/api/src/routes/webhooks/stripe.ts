@@ -1,7 +1,7 @@
 ﻿import type { FastifyInstance } from "fastify";
 import { verifyHmacSignature } from "../../src/lib/hmac";
 
-export async function registerStripeWebhook(app: FastifyInstance) {
+export async function registerStripeWebhook(app: FastifyInstance) {\n  app.addHook('preHandler', async (req, rep) => { try { ensureLive(req); } catch (e:any) { return rep.code(e.statusCode||403).send({ error: e.message }); } });
   app.post("/api/v1/webhooks/stripe", async (req, rep) => {
     const sig = req.headers["x-signature"] as string | undefined;
     const ts = req.headers["x-timestamp"] as string | undefined;
@@ -13,3 +13,4 @@ export async function registerStripeWebhook(app: FastifyInstance) {
     return rep.code(200).send({ received: true });
   });
 }
+
