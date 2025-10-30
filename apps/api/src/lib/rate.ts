@@ -17,7 +17,8 @@ export function withRateLimit(app: FastifyInstance) {
     bucket.count += 1;
     if (bucket.count > max) {
       rep.header('Retry-After', '60');
-      return rep.code(429).send({ error: 'rate_limited' });
+      rep.header('X-RateLimit-Limit', String(max)); rep.header('X-RateLimit-Remaining', '0'); return rep.code(429).send({ error: 'rate_limited' });
     }
   });
 }
+

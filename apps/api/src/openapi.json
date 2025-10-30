@@ -1,13 +1,88 @@
 ﻿{
-  "openapi": "3.1.0",
-  "info": { "title": "mybavul API", "version": "1.0.0" },
-  "servers": [{"url": "https://api.mybavul.com"}],
-  "paths": {
-    "/api/v1/healthz": { "get": { "responses": { "200": {"description": "ok"} } } },
-    "/api/v1/reservations": { "post": { "responses": { "201": {"description": "created"} } } },
-    "/api/v1/channels/{id}/pull-reservations": { "post": { "parameters": [{"name":"id","in":"path","required":true,"schema":{"type":"string"}}], "responses": { "200": {"description": "ok"} } } },
-    "/api/v1/channels/{id}/push-rates": { "post": { "parameters": [{"name":"id","in":"path","required":true,"schema":{"type":"string"}}], "responses": { "200": {"description": "ok"} } } },
-    "/api/v1/payments/intent": { "post": { "responses": { "200": {"description": "ok"} } } },
-    "/api/v1/webhooks/stripe": { "post": { "responses": { "200": {"description": "ok"} } } }
-  }
+    "openapi":  "3.1.0",
+    "info":  {
+                 "title":  "mybavul API",
+                 "version":  "1.0.0"
+             },
+    "servers":  [
+                    {
+                        "url":  "https://api.mybavul.com"
+                    }
+                ],
+    "paths":  {
+                  "/api/v1/healthz":  {
+                                          "get":  {
+                                                      "responses":  {
+                                                                        "200":  {
+                                                                                    "description":  "ok"
+                                                                                }
+                                                                    }
+                                                  }
+                                      },
+                  "/api/v1/reservations":  {
+                                               "post":  {
+                                                            "responses":  {
+                                                                              "201":  {
+                                                                                          "description":  "created"
+                                                                                      }
+                                                                          }
+                                                        }
+                                           },
+                  "/api/v1/channels/{id}/pull-reservations":  {
+                                                                  "post":  {
+                                                                               "parameters":  [
+                                                                                                  {
+                                                                                                      "name":  "id",
+                                                                                                      "in":  "path",
+                                                                                                      "required":  true,
+                                                                                                      "schema":  {
+                                                                                                                     "type":  "string"
+                                                                                                                 }
+                                                                                                  }
+                                                                                              ],
+                                                                               "responses":  {
+                                                                                                 "200":  {
+                                                                                                             "description":  "ok"
+                                                                                                         }
+                                                                                             }
+                                                                           }
+                                                              },
+                  "/api/v1/channels/{id}/push-rates":  {
+                                                           "post":  {
+                                                                        "parameters":  [
+                                                                                           {
+                                                                                               "name":  "id",
+                                                                                               "in":  "path",
+                                                                                               "required":  true,
+                                                                                               "schema":  {
+                                                                                                              "type":  "string"
+                                                                                                          }
+                                                                                           }
+                                                                                       ],
+                                                                        "responses":  {
+                                                                                          "200":  {
+                                                                                                      "description":  "ok"
+                                                                                                  }
+                                                                                      }
+                                                                    }
+                                                       },
+                  "/api/v1/payments/intent":  {
+                                                  "post":  {
+                                                               "responses":  {
+                                                                                 "200":  {
+                                                                                             "description":  "ok"
+                                                                                         }
+                                                                             }
+                                                           }
+                                              },
+                  "/api/v1/webhooks/stripe":  {
+                                                  "post":  {
+                                                               "responses":  {
+                                                                                 "200":  {
+                                                                                             "description":  "ok"
+                                                                                         }
+                                                                             }
+                                                           }
+                                              }
+              }
 }
