@@ -5,6 +5,10 @@ const nextConfig = {
   images: { remotePatterns: [
     { protocol: 'https', hostname: 'xcvcplwimicylaxghiak.supabase.co' },
   ]},
+  async rewrites() {
+    const base = process.env.NEXT_PUBLIC_API_BASE || '';
+    if (!base) return [];
+    return [{ source: '/api/:path*', destination: `${base}/api/:path*` }];
+  },
 };
 export default nextConfig;
-\nexport async function rewrites() {\n  const base = process.env.NEXT_PUBLIC_API_BASE || '';\n  return [{ source: '/api/:path*', destination: ${base}/api/:path* }];\n}\n
