@@ -13,3 +13,4 @@ export default function Page(){
     <div><button onClick={onSave} style={{marginTop:12}}>Save</button></div>
   </main>;
 }
+

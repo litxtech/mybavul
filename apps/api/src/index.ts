@@ -10,7 +10,7 @@ await app.register(cors, { origin: [/^https:\/\/mybavul\.com$/, /^https:\/\/admi
 withIdempotency(app);\nimport { withRateLimit } from './lib/rate';\nwithRateLimit(app);
 
 await registerRoutes(app);\nimport { enhanceReservations } from './routes/reservations';\nawait enhanceReservations(app);
-await registerStripeWebhook(app);\nimport { registerSync } from './routes/sync';\nawait registerSync(app);\nimport { registerPayments } from './routes/payments';\nawait registerPayments(app);\nimport { registerPayouts } from './routes/payouts';\nawait registerPayouts(app);
+await registerStripeWebhook(app);\nimport { registerSync } from './routes/sync';\nawait registerSync(app);\nimport { registerPayments } from './routes/payments';\nawait registerPayments(app);\nimport { registerPayouts } from './routes/payouts';\nawait registerPayouts(app);\nimport { registerPartner } from './routes/partner';\nawait registerPartner(app);
 
 await app.listen({ port: Number(process.env.PORT ?? 3001), host: "0.0.0.0" });
 
@@ -18,4 +18,5 @@ await app.listen({ port: Number(process.env.PORT ?? 3001), host: "0.0.0.0" });
 
 
 \napp.get('/api/v1/openapi.json', async () => (await import('./openapi.json', { assert: { type: 'json' } })).default as any);\n
+
 
